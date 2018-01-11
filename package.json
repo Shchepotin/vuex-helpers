@@ -1,6 +1,6 @@
 {
   "name": "schepotin-vuex-helpers",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Helpers for vuex",
   "main": "dist/index.js",
   "scripts": {
