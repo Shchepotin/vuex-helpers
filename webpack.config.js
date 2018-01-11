@@ -3,7 +3,9 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
     entry: './src/index.js',
     output: {
-        filename: './dist/index.js'
+        filename: './dist/index.js',
+        libraryTarget: 'umd',
+        umdNamedDefine: true
     },
     watch: true,
     module: {
