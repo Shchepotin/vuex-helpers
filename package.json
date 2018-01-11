@@ -1,5 +1,5 @@
 {
-  "name": "vuex-helpers",
+  "name": "schepotin-vuex-helpers",
   "version": "0.0.1",
   "description": "Helpers for vuex",
   "main": "dist/index.js",
@@ -22,9 +22,10 @@
   },
   "homepage": "https://github.com/Schepotin/vuex-helpers#readme",
   "devDependencies": {
-    "webpack": "^3.10.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.1"
+    "babel-preset-env": "^1.6.1",
+    "uglifyjs-webpack-plugin": "^1.1.6",
+    "webpack": "^3.10.0"
   }
 }
