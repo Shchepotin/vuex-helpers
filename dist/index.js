@@ -103,7 +103,7 @@ exports.default = function () {
      */
     var _parseArguments = parseArguments(arguments),
         namespace = _parseArguments.namespace,
-        computedPrefix = _parseArguments.computedPrefix,
+        prefix = _parseArguments.prefix,
         mappings = _parseArguments.mappings; // eslint-disable-line prefer-rest-params
 
     var computedProperties = {};
@@ -114,7 +114,7 @@ exports.default = function () {
     mappings.forEach(function (key) {
         var name = key;
 
-        if (computedPrefix) {
+        if (prefix) {
             /*
              * To camel case.
              */
@@ -139,14 +139,14 @@ var parseArguments = function parseArguments(initialArguments) {
 
     var result = {
         namespace: null,
-        computedPrefix: false,
+        prefix: false,
         mappings: first
     };
 
     if (!Array.isArray(first)) {
         result = {
             namespace: first.namespace !== undefined ? first.namespace : null,
-            computedPrefix: first.computedPrefix !== undefined ? first.computedPrefix : false,
+            prefix: first.prefix !== undefined ? first.prefix : false,
             mappings: second
         };
     }

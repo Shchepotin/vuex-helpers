@@ -7,7 +7,7 @@ Generates two way [computed properties](https://vuejs.org/v2/guide/computed.html
 ```javascript
 ...mapTwoWayState({
   namespace: 'user',
-  computedPrefix: true,
+  prefix: true,
 }, [
   'name',
 ]),

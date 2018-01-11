@@ -4,14 +4,14 @@ const parseArguments = (initialArguments) => {
 
     let result = {
         namespace: null,
-        computedPrefix: false,
+        prefix: false,
         mappings: first,
     };
 
     if (!Array.isArray(first)) {
         result = {
             namespace: first.namespace !== undefined ? first.namespace : null,
-            computedPrefix: first.computedPrefix !== undefined ? first.computedPrefix : false,
+            prefix: first.prefix !== undefined ? first.prefix : false,
             mappings: second,
         };
     }
@@ -66,7 +66,7 @@ export default function () {
      */
     const {
         namespace,
-        computedPrefix,
+        prefix,
         mappings,
     } = parseArguments(arguments); // eslint-disable-line prefer-rest-params
 
@@ -78,7 +78,7 @@ export default function () {
     mappings.forEach((key) => {
         let name = key;
 
-        if (computedPrefix) {
+        if (prefix) {
             /*
              * To camel case.
              */
