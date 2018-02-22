@@ -6,7 +6,7 @@ export default function ({ types, excludes = [] }) {
             /*
              * To camel case.
              */
-            const name = key.toLowerCase().replace(/(_)([a-z0-9])/, match => match[1].toUpperCase());
+            const name = key.toLowerCase().replace(/(_)([a-z0-9])/g, match => match[1].toUpperCase());
 
             // eslint-disable-next-line func-names
             mutations[key] = function (state, payload) {

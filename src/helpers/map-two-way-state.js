@@ -36,7 +36,7 @@ const createSetter = (namespace, mapping) => {
     /*
      * To upper snake case.
      */
-    let mutation = mapping.replace(/([A-Z])/, '_$1').toUpperCase();
+    let mutation = mapping.replace(/([A-Z])/g, '_$1').toUpperCase();
 
     if (namespace) {
         mutation = `${namespace}/${mutation}`;
@@ -83,7 +83,7 @@ export default function () {
              * To camel case.
              */
             name = name.charAt(0).toUpperCase() + name.slice(1);
-            name = `${namespace.replace(/(\/)(\w{1})/, match => match[1].toUpperCase())}${name}`;
+            name = `${namespace.replace(/(\/)(\w{1})/g, match => match[1].toUpperCase())}${name}`;
         }
 
         computedProperties[name] = {
